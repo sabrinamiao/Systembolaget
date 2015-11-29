@@ -1,0 +1,127 @@
+    body {
+        font-family: 'Palanquin', sans-serif;
+        ;
+    }
+    
+    .navbar-right {
+        padding-top: 8px;
+    }
+    
+    .navbar-inverse .navbar-nav>li>a {
+        color: white;
+    }
+    
+    .fa-2x {
+        color: white;
+    }
+    
+    #navbar {
+        font-size: 20px;
+        padding-top: 8px;
+    }
+    
+    .modal-title {
+        text-align: center;
+    }
+    
+    .modal-body {
+        text-align: center;
+    }
+    
+    .right-inner-addon {
+        position: relative;
+        padding-top: 20px;
+    }
+    
+    .right-inner-addon input {
+        padding-right: 30px;
+        border-radius: 30px 30px 30px 30px;
+        height: 2
+    }
+    
+    .right-inner-addon i {
+        position: absolute;
+        right: 0px;
+        padding: 15px 12px;
+        pointer-events: none;
+    }
+    
+    .modal-backdrop {
+        z-index: 999;
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        /**screen size >=1200px**/
+        .carousel-inner>.item>a>img,
+        .carousel-inner>.item>img {
+            margin: auto;
+        }
+        .container-fluid {
+            margin-bottom: 80px;
+        }
+        .col-xs-offset-5 {
+            margin-bottom: 40px;
+        }
+        .navbar {
+            height: 80px;
+        }
+        #myCarousel {
+            width: 1398px;
+            margin: auto;
+            margin-top: 80px;
+        }
+    }
+    /*screen size >= 768px*/
+    
+    @media only screen and (min-width:768px) {
+        #footerContainer {
+            background-color: #F2F1EC;
+            margin-top: 40px;
+        }
+        #myCarouse {
+            margin-top: 80px;
+        }
+    }
+    
+    .h2,
+    h2 {
+        text-align: center;
+    }
+    
+    .col-xs-offset-2 {
+        margin-bottom: 20px;
+    }
+    
+    #butik {
+        color: red;
+        font-weight: bold;
+    }
+    
+    #kundtjanst {
+        color: #80B541;
+        font-weight: bold;
+    }
+    
+    #twitter {
+        color: #3E99CF;
+        font-weight: bold;
+    }
+    
+    #facebook {
+        color: #3C5B9A;
+        font-weight: bold;
+    }
+    
+    .row-footer {
+        background-color: #E5E4E1;
+    }
+    
+    .copyright {
+        color: #B3B3B3;
+    }
+    
+    @media only screen and (max-width:768px) {
+        .col-md-4 {
+            display: none;
+        }
+    }

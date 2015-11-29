@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!---The width=device-width part set the width of the page to follow the screen-width of the device. The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.--->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:100,200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Välkommen till Systembolaget.se</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-xs-1">
+                    <a class="navbar-brand" href="systembolaget.html"><img src="../img/main_page_icon/sb-logotype.svg"></a>
+                </div>
+            </div>
+            <div class="row row-content">
+                <div class="col-xs-12 col-sm-10">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Sök dryck</a></li>
+                            <li><a href="#">Fakta &amp; nyheter </a></li>
+                            <li><a href="#">Vad passar till?</a></li>
+                            <li><a href="#">Om alkohol</a></li>
+                            <li><a href="#">Vårt uppdrag</a></li>
+                            <li><a href="#">Öppettider</a></li>
+                        </ul>
+                        <div class="navbar-right">
+                            <div class="col-xs-1 col-sm-1">
+                                <div>
+                                    <!--Trigger the modal with a link -->
+                                    <a type="button" id="loginButton" class="btn btn-inverse" data-toggle="modal" data-target="#loginDialog"><span class="fa fa-sign-in fa-2x"></span></a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="loginModal" role="dialog">
+                                        <div id="loginDialog" class="modal-dialog">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form role="form" action="login.php" method="post">
+                                                        <div class="form-group">
+                                                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                                            <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="" checked>Remember me</label>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                                    <p>Not a member? <a href="registraion.html">Sign Up</a></p>
+                                                    <p>Forgot <a href="forgetpassword.php">Password?</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <div class="container">
+        <p style="padding:40px;"></p>
+        <div class="row row-content">
+            <div class="col-xs-8 col-sm-6 col-xs-offset-2 col-sm-offset-4">
+                <div class="search">
+                    <h1>Sök bland 17 000 drycker</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <div class="right-inner-addon ">
+                    <a href="#"><i class="fa fa-search"></i><input type="search" class="form-control input-lg" placeholder="Sök dryck, land, varunummer, druva etc" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="../img/slide_pic/historiesajt_karusell.jpg" alt="historiesajt">
+                    <div class="carousel-caption">
+                        <span class="title">Systembolaget firar 60 år!</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/slide_pic/Karusell_Lamm.jpg" alt="karuselllamm">
+                </div>
+                <div class="item">
+                    <img src="../img/slide_pic/langa%20inte_syskonfilm_1.jpg" alt="syskonfilm">
+                    <div class="carousel-caption">
+                        <span class="title">Se senaste filmen!</span>
+                        <span class="content">Langning är ingen smart ide.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/slide_pic/Karusell_Glo%CC%88gg_tilltugg.jpg" alt="historiesajt">
+                    <div class="carousel-caption">
+                        <span class="title">Sött, salt och hett</span>
+                        <span class="content">Vi tipsar om passande tilltugg till glögg.</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <div class="col-xs-2 col-xs-offset-5">
+                    <h2>Aktuellt</h2>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-2">
+                <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                    <p>25 november</p>
+                </div>
+                <div class="col-xs-7 col-sm-8">
+                    <a href="#">
+                        <p>Webblansering 26 november</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-2">
+                <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                    <p>24 november</p>
+                </div>
+                <div class="col-xs-7 col-sm-8">
+                    <a href="#">
+                        <p>Nyheter i ordinarie sortiment 1 december</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-2">
+                <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                    <p>24 november</p>
+                </div>
+                <div class="col-xs-7 col-sm-8">
+                    <a href="#">
+                        <p>Nytt i lokalt &amp; småskaligt 1 december</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-2">
+                <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                    <p>13 november</p>
+                </div>
+                <div class="col-xs-7 col-sm-8">
+                    <a href="#">
+                        <p>20 november nya små partier</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-6">
+                <i class="fa fa-arrow-circle-right fa-lg"> SE ALLA</i>
+            </div>
+        </div>
+    </div>
+    <div id="footerContainer">
+        <div class="container-fluid">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <h2>Vi svarar gärna på dina frågor - i butiken, på telefon, e-post och Facebook. Välkommen!</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../img/main_page_pic/footer_image_medarbetare.png">
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-2">
+                                <img src="../img/main_page_icon/icon-sites.png" height=60 width=60>
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-sm-offset-1">
+                                <a href="#">
+                                    <p id="butik">Våra butiker och ombud</p>
+                                </a>
+                                <p>Adresser och öppettider för våra butiker och ombud</p>
+                            </div>
+                        </div>
+                        <p style="padding:5px;"></p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-2">
+                                <img src="../img/main_page_icon/10_icon-customer-service.png" height=60 width=60>
+                            </div>
+                            <div class="col-xs-12 col-sm-10">
+                                <a href="mailto:kundtjanst@systembolaget.se">
+                                    <p id="kundtjanst">kundtjanst@systembolaget.se</p>
+                                </a>
+
+                                <p>Vi finns på plats vardagar 9-18 och lördagar 10-15. <strong>0771-83 83 00</strong></p>
+                            </div>
+                        </div>
+                        <p style="padding:5px;"></p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-2">
+                                <img src="../img/main_page_icon/icon-twitter.png" height=60 width=60>
+                            </div>
+                            <div class="col-xs-12 col-sm-10">
+                                <a href="#">
+                                    <p id="twitter">@systembolaget</p>
+                                </a>
+                                <p>Följ oss på Twitter. Här twittrar vi om aktuella frågor.</p>
+                            </div>
+                        </div>
+                        <p style="padding:5px;"></p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-2">
+                                <img src="../img/main_page_icon/icon-facebook.png" height=60 width=60>
+                            </div>
+                            <div class="col-xs-12 col-sm-10">
+                                <a href="www.facebook.com/systembolaget">
+                                    <p id="facebook">facebook.com/systembolaget</p>
+                                </a>
+                                <p>Diskutera med andra eller ställ dina frågor direkt till oss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="col-xs-12">
+                                <strong>Om oss</strong>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Om Systembolaget</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Vårt uppdrag</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Hållbarhet</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">English</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Jobba hos oss</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="col-xs-12">
+                                <strong>Press och vanliga frågor</strong>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Pressrum</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Vanliga frågor</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Butiker &amp; ombud</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="col-xs-12">
+                                <strong>Beställa</strong>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Beställa dryck</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Webblanseringar</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="col-xs-12">
+                                <strong>Övrigt</strong>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Vår app</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Presentartiklar</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Öppna API:er</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Bli leverantör</a>
+                            </div>
+                            <div>
+                                <i class="fa fa-arrow-right"></i><a href="#">Leverantörsportalen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">
+                <div class="copyright">&copy; Systembolaget</div>
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <div class="col-xs-3 col-sm-2">
+                    <a href="#">Om länkning</a>
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <a href="#">Om cookies</a>
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <a href="#">Om webbplatsen</a>
+                </div>
+                <div class="col-xs-3 col-sm-4">
+                    <a href="#">Allmänna villkor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--- JQuery library --->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script src="../js/script.js"></script>
+</body>
