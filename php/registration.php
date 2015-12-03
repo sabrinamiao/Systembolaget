@@ -14,6 +14,7 @@
 </head>
 
 <body>
+   <!--navigation bar-->
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -103,6 +104,7 @@
                 </div>
             </div>
     </nav>
+    <!--PHP-->
     <div class="h3">
         <h3>Skapa konto</h3>
         <h4><?php if(isset($_GET['msg'])){echo $_GET['msg'];}else {echo "&nbsp;";} ?></h4>
@@ -135,10 +137,6 @@ if( !preg_match("#\W+#", $_POST['password1']) ) {
 	header("location:registration.php?msg=Password must include at least one symbol!");
     exit();
 }
-/*if (($_POST['password1'] != $_POST['password2'])){
-    header("location: registration.php?msg=Passwords don't match!");
-    exit();
-        }*/
 if(empty($_POST['email'])){
     header("location:registration.php?msg=Please fill in your email address!");
                 exit();
@@ -176,6 +174,10 @@ $body="Thank you for your registration at".$_SERVER['HTTP_HOST']."\n\nHere are y
 ?>
 
         <div class="container">
+           <div class="col-xs-12">
+               <div class="createAccount">Skapa konto</div>
+           </div>
+           <div class="col-sm-"
             <form role="form" name="registration" action="registration.php" method="post">
                 <div class="form-group">
                     <label for="username">Username:</label>
