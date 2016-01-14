@@ -83,14 +83,16 @@
             margin-top: 80px;
         }
     }
-
-@media only screen and (min-width: 600px){
-    /*For tablet*/
-    #footerimage{
-        height:300px;
-        width:180px;
+    
+    @media only screen and (min-width: 600px) {
+        /*For tablet*/
     }
-}
+    
+    @media only screen and (max-width:768px) {
+        .col-md-4 {
+            display: none;
+        }
+    }
     
     .h2,
     h2 {
@@ -127,10 +129,4 @@
     
     .copyright {
         color: #B3B3B3;
-    }
-    
-    @media only screen and (max-width:768px) {
-        .col-md-4 {
-            display: none;
-        }
     }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="sortimentCtrl">
+ 
+<table>
+ <tr>
+     <td>Artikel ID</td>
+     <td>Namn</td>
+     <td>Namn2</td>
+     <td>Pris inkl. moms</td>
+     <td>Volymn i ml</td>
+     <td>Varugrupp</td>
+     <td>Förpackning</td>
+     <td>Ursprung</td>
+     <td>Leverantör</td>
+     <td>Årgång</td>
+     <td>Alkoholhalt</td>
+     <td>Ekologisk</td>
+ </tr>
+  <tr ng-repeat="x in sortiment">
+    <td>{{ x.Artikelid }}</td>
+    <td>{{ x.Namn }}</td>
+    <td>{{ x.Namn2 }}</td>
+    <td>{{ x.Prisinklmomos }}</td>
+    <td>{{ x.Volymiml }}</td>
+  </tr>
+</table>
+ 
+</div>
+<script src="../js/sortiment.js"></script>
+</body>
+</html>
